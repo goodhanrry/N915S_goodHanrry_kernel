@@ -101,23 +101,23 @@ static struct apll_freq exynos5433_apll_freq_CA7[] = {
 static const unsigned int asv_voltage_5433_CA7[CPUFREQ_LEVEL_END_CA7] = {
 	1375000,	/* L0  2000 */
 	1375000,	/* L1  1900 */
-	1375000,	/* L2  1800 */
-	1325000,	/* L3  1700 */
-	1275000,	/* L4  1600 */
-	1250000,	/* L5  1500 */
-	1200000,	/* L6  1400 */
-	1150000,	/* L7  1300 */
-	1112500,	/* L8  1200 */
-	1075000,	/* L9  1100 */
-	1050000,	/* L10 1000 */
-	1025000,	/* L11  900 */
-	1000000,	/* L12  800 */
-	 975000,	/* L13  700 */
-	 950000,	/* L14  600 */
-	 925000,	/* L15  500 */
-	 900000,	/* L16  400 */
-	 875000,	/* L17  300 */
-	 850000,	/* L18  200 */
+	1350000,	/* L2  1800 */
+	1300000,	/* L3  1700 */
+	1255000,	/* L4  1600 */
+	1225000,	/* L5  1500 */
+	1175000,	/* L6  1400 */
+	1100000,	/* L7  1300 */
+	1007500,	/* L8  1200 */
+	1025000,	/* L9  1100 */
+	1000000,	/* L10 1000 */
+	 975000,	/* L11  900 */
+	 950000,	/* L12  800 */
+	 925000,	/* L13  700 */
+	 900000,	/* L14  600 */
+	 875000,	/* L15  500 */
+	 850000,	/* L16  400 */
+	 850000,	/* L17  300 */
+	 825000,	/* L18  200 */
 };
 
 /* Minimum memory throughput in megabytes per second */
@@ -308,7 +308,7 @@ static void __init set_volt_table_CA7(void)
 	}
 
 	max_support_idx_CA7 = L7;	/* 1.3GHz */
-	min_support_idx_CA7 = L16;	/* 400MHz */
+	min_support_idx_CA7 = L18;	/* 200MHz */
 	pr_info("CPUFREQ of CA7 max_freq : L%d %u khz\n", max_support_idx_CA7,
 		exynos5433_freq_table_CA7[max_support_idx_CA7].frequency);
 	pr_info("CPUFREQ of CA7 min_freq : L%d %u khz\n", min_support_idx_CA7,
